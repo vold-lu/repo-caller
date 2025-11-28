@@ -1,0 +1,12 @@
+on: [ push ]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger workflow in Repo B
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          repository: vold-lu/repo-callee
+          event-type: new-release
