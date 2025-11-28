@@ -10,3 +10,4 @@ jobs:
         with:
           repository: vold-lu/repo-callee
           event-type: new-release
+          token: ${{ secrets.WORKFLOW_TOKEN }}
